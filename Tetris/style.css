@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    width: 300px;
+    height: 525px;
+    border: solid;
+    margin: auto;
+    margin-top: 5px;
+    flex-direction: column;
+}
+
+.name {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    height: 5%;
+}
+
+.container-cell {
+    width: 10%;
+    border: solid;
+}
+
+.scoreboard {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#message {
+    height: 20%;
+    text-align: center;
+}

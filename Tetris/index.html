@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Tetris! </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body style="width: 55%; margin: auto;">
+    <h2 class="name"> Tetris! </h3>
+        <div style="display: flex; flex-direction: row; justify-content: center;">
+            <div class="scoreboard" style="border: solid;">
+                <div style="height: 20%;">
+                    <button id="game-over" style="display: block; margin: auto;" onclick="pauseGame()"> Pause </button>
+                </div>
+                <div id="message"> </div>
+                <div style="height: 20%;">
+                    <button id="restart" style="display: block; margin: auto;" onclick="restartGame()"> Restart Game </button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                    <div class="container-cell"> </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="script.js"></script>
+
+</html>
